@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miss K Kitchen & Bath Remodels | Homepage Mockup</title>
+<meta name="description" content="Design mockup: Utah's woman-owned kitchen and bathroom remodelers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Palette: plum ink, mulberry, orchid mist, brass, porcelain */
+:root{
+  --ink:#2a1226; --mulberry:#7d2f62; --mist:#efe6ec; --brass:#b48a4e; --porcelain:#fbf8fa; --text:#3b2a37;
+  --display:"Bodoni Moda","Didot",Georgia,serif; --body:"Jost","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--text);background:var(--porcelain);line-height:1.6;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.1;color:var(--ink)}
+h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:16px}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--mulberry);background:var(--mulberry);color:#fff;cursor:pointer;font:600 1rem var(--body);transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--mulberry)}
+.btn.ghost:hover{background:var(--mulberry);color:#fff}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;background:rgba(251,248,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e6d9e1}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.logo{font-family:var(--display);font-size:1.5rem;font-weight:700;color:var(--ink);text-decoration:none;line-height:1}
+.logo small{display:block;font:500 .72rem var(--body);letter-spacing:.04em;color:var(--mulberry);margin-top:4px}
+nav ul{display:flex;gap:26px;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--mulberry)}
+.bar .btn{padding:10px 22px}
+.phone{font-weight:600;text-decoration:none}
+
+/* Hero: the arch is the signature shape of the whole site */
+.hero{background:var(--ink);color:#f3e9f0;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:end;padding-top:72px}
+.hero h1{color:#fff;font-size:clamp(2.8rem,6.4vw,5.4rem);font-weight:700;letter-spacing:-.01em;margin-bottom:24px}
+.hero h1 em{color:#e3bfd4;font-weight:500}
+.hero p{max-width:46ch;font-size:1.15rem;margin-bottom:32px;color:#e5d6e0}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+.hero .btn.ghost{color:#fff;border-color:#c9a7bd}
+.hero .btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.arch{aspect-ratio:4/5.2;border-radius:999px 999px 0 0;background:linear-gradient(160deg,#7d2f62,#2a1226) center/cover;border:1px solid var(--brass);outline:1px solid var(--brass);outline-offset:10px}
+.hero .arch{background-image:url("images/hero-bathroom.jpg"),url("https://misskremodels.com/wp-content/uploads/2025/05/02-DSC04367-scaled.jpg"),linear-gradient(160deg,#7d2f62,#2a1226);animation:rise 1.1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+
+/* Trust bar */
+.trust{background:var(--brass);color:var(--ink)}
+.trust .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;padding-top:16px;padding-bottom:16px;font-weight:600}
+
+section{padding:96px 0}
+.lead{max-width:56ch;margin-bottom:48px;font-size:1.1rem}
+
+/* Services */
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.svc a{text-decoration:none;display:block}
+.svc .arch{aspect-ratio:3/4;margin-bottom:22px;outline:none;border-color:transparent;transition:transform .3s}
+.svc a:hover .arch{transform:translateY(-6px)}
+.svc h3{font-size:1.7rem;margin-bottom:6px}
+.svc p{color:#5b4756}
+
+/* Portfolio */
+.portfolio{background:var(--mist)}
+.filters{display:flex;gap:10px;margin-bottom:28px;flex-wrap:wrap}
+.filters button{font:500 1rem var(--body);padding:9px 22px;border-radius:999px;border:1.5px solid var(--mulberry);background:transparent;color:var(--mulberry);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--mulberry);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tile{position:relative;aspect-ratio:4/5;border-radius:6px 6px 120px 6px;overflow:hidden;background:linear-gradient(160deg,#c9a7bd,#7d2f62) center/cover}
+.tile:nth-child(even){border-radius:120px 6px 6px 6px}
+.tile span{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;color:#fff;font-weight:500;background:linear-gradient(transparent,rgba(42,18,38,.85))}
+.tile[hidden]{display:none}
+
+/* Process: a true sequence */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;counter-reset:s}
+.steps div{border-top:3px solid var(--brass);padding-top:20px}
+.steps h3{font-size:1.5rem;margin-bottom:8px}
+.steps h3::before{counter-increment:s;content:counter(s) ". ";color:var(--mulberry)}
+
+/* Owner */
+.owner{background:var(--ink);color:#e5d6e0}
+.owner .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.owner .arch{aspect-ratio:1/1.1;background-image:url("images/owner.jpg"),url("https://kandaremodels.wpenginepowered.com/wp-content/uploads/2024/03/Karenina-Headshot_edited_sq.jpg"),linear-gradient(160deg,#b48a4e,#7d2f62)}
+.owner h2{color:#fff}
+.owner p{margin-bottom:18px;max-width:52ch}
+
+/* Estimate form */
+.estimate .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+form{display:grid;gap:16px}
+label{font-weight:500;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1.5px solid #cdb9c6;border-radius:8px;background:#fff;color:var(--text)}
+textarea{min-height:110px;resize:vertical}
+.note{font-size:.95rem;color:#5b4756}
+
+footer{background:#1c0b19;color:#cdb9c6;padding:56px 0;font-size:.98rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:28px}
+footer strong{color:#fff;font-family:var(--display);font-size:1.3rem;font-weight:500;display:block;margin-bottom:8px}
+
+@media (max-width:860px){
+  nav,.phone{display:none}
+  .hero .wrap,.owner .wrap,.estimate .wrap{grid-template-columns:1fr;gap:40px}
+  .hero .wrap{padding-top:48px}
+  .hero .arch{max-width:420px}
+  .services,.steps{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  section{padding:64px 0}
+}
+@media (max-width:520px){.grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.hero .arch{animation:none}html{scroll-behavior:auto}.svc a:hover .arch{transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Miss K<small>Kitchen &amp; Bath Remodels</small></a>
+    <nav aria-label="Main"><ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#about">About</a></li>
+    </ul></nav>
+    <a class="phone" href="tel:+13859934949">(385) 993-4949</a>
+    <a class="btn" href="#estimate">Get your free estimate</a>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Kitchens and baths with a point of view.</h1>
+      <p>Miss K is Utah's woman-owned remodeling team. We design and build spaces that look like you and work every day, from the first sketch to the final walkthrough.</p>
+      <div class="cta">
+        <a class="btn" href="#estimate">Get your free estimate</a>
+        <a class="btn ghost" href="#portfolio">See our projects</a>
+      </div>
+    </div>
+    <div class="arch" role="img" aria-label="Remodeled bathroom by Miss K"></div>
+  </div>
+</div>
+
+<div class="trust"><div class="wrap">
+  <span>Woman-owned</span><span>Licensed Utah contractor #13065282-5501</span><span>Serving Salt Lake, Utah, Davis and Summit counties</span>
+</div></div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What we remodel</h2>
+    <p class="lead">Every project starts with a free design consultation, so the plan fits your home, your budget and the way you live.</p>
+    <div class="services">
+      <div class="svc"><a href="#">
+        <div class="arch" style="background-image:url('images/service-kitchen.jpg'),url('https://misskremodels.com/wp-content/uploads/2024/08/kitchen-remodel.jpg'),linear-gradient(160deg,#7d2f62,#2a1226)"></div>
+        <h3>Kitchens</h3><p>Layouts, cabinetry, counters and lighting built around how you cook and gather.</p></a></div>
+      <div class="svc"><a href="#">
+        <div class="arch" style="background-image:url('images/service-bathroom.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/05/06-DSC04296-scaled.jpg'),linear-gradient(160deg,#7d2f62,#2a1226)"></div>
+        <h3>Bathrooms</h3><p>Spa-style showers, vanities and tile, with waterproofing done right.</p></a></div>
+      <div class="svc"><a href="#">
+        <div class="arch" style="background-image:url('images/service-whole-home.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/04/9b.-AfterSpaRemodelSaunaIMG_0936-scaled.jpg'),linear-gradient(160deg,#7d2f62,#2a1226)"></div>
+        <h3>Whole-home and custom</h3><p>Larger renovations and custom builds, managed by one team from start to finish.</p></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <h2>Recent projects</h2>
+    <p class="lead">Browse completed kitchens and bathrooms. Each project opens into a full before-and-after gallery.</p>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button aria-pressed="true" data-f="all">All</button>
+      <button aria-pressed="false" data-f="kitchen">Kitchens</button>
+      <button aria-pressed="false" data-f="bath">Bathrooms</button>
+    </div>
+    <div class="grid">
+      <div class="tile" data-c="kitchen" style="background-image:url('images/project-alyssa.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/08/Alyssa1-400x300.jpg'),linear-gradient(160deg,#c9a7bd,#7d2f62)"><span>Kitchen remodel, Alyssa</span></div>
+      <div class="tile" data-c="bath" style="background-image:url('images/project-zack.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/08/Zack1-400x300.jpg'),linear-gradient(160deg,#c9a7bd,#7d2f62)"><span>Bathroom remodel, Zack</span></div>
+      <div class="tile" data-c="kitchen" style="background-image:url('images/project-chris.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/08/Chris1-400x300.jpg'),linear-gradient(160deg,#c9a7bd,#7d2f62)"><span>Kitchen remodel, Chris</span></div>
+      <div class="tile" data-c="bath" style="background-image:url('images/project-kristen.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/08/Kristen-400x300.jpg'),linear-gradient(160deg,#c9a7bd,#7d2f62)"><span>Bathroom remodel, Kristen</span></div>
+      <div class="tile" data-c="bath" style="background-image:url('images/project-natale.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/08/Natale1-400x300.jpg'),linear-gradient(160deg,#c9a7bd,#7d2f62)"><span>Bathroom remodel, Natale</span></div>
+      <div class="tile" data-c="kitchen" style="background-image:url('images/project-kitchen3.jpg'),url('https://misskremodels.com/wp-content/uploads/2025/08/13-Nov-11-2024-08_08pm-nfsi-400x300.jpg'),linear-gradient(160deg,#c9a7bd,#7d2f62)"><span>Kitchen remodel, Project 3</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2>How a remodel works</h2>
+    <p class="lead">Three stages, with clear updates at each one.</p>
+    <div class="steps">
+      <div><h3>Plan and design</h3><p>We meet to talk through your vision, budget and style, then shape a layout and material list that fits.</p></div>
+      <div><h3>Choose your finishes</h3><p>Cabinets, tile, fixtures, lighting and appliances. We help you pick, so every piece works together.</p></div>
+      <div><h3>Build</h3><p>Construction begins with a clear schedule. We keep you posted from demolition to the final walkthrough.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="owner" id="about">
+  <div class="wrap">
+    <div class="arch" role="img" aria-label="Karenina Bullock, owner of Miss K"></div>
+    <div>
+      <h2>Meet Miss K</h2>
+      <p>Miss K Kitchen &amp; Bath Remodels is led by Karenina Bullock, a general contractor who believes a remodel should feel personal, not like a template.</p>
+      <p>When you call, you talk to the person who runs the job. That is why our clients get honest advice, steady communication and work they are proud to show off.</p>
+      <a class="btn" href="#estimate">Talk to Miss K</a>
+    </div>
+  </div>
+</section>
+
+<section class="estimate" id="estimate">
+  <div class="wrap">
+    <div>
+      <h2>Start with a free estimate</h2>
+      <p class="lead">Tell us about your project and we will reach out to schedule your free design consultation.</p>
+      <p class="note">Call us at <a href="tel:+13859934949"><strong>(385) 993-4949</strong></a><br>2825 E Cottonwood Pkwy, Suite 569<br>Cottonwood Heights, UT 84121</p>
+    </div>
+    <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Mockup only: form not connected';">
+      <label>Name<input name="name" autocomplete="name" required></label>
+      <label>Phone or email<input name="contact" required></label>
+      <label>Project type
+        <select name="type"><option>Kitchen remodel</option><option>Bathroom remodel</option><option>Whole-home or custom build</option></select>
+      </label>
+      <label>Tell us about your project<textarea name="msg"></textarea></label>
+      <button class="btn" type="submit">Request my free estimate</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong>Miss K Kitchen &amp; Bath Remodels</strong>Utah's woman-owned remodelers<br>License #13065282-5501</div>
+    <div>2825 E Cottonwood Pkwy, Suite 569<br>Cottonwood Heights, UT 84121<br>(385) 993-4949</div>
+    <div>Design mockup by Marco Tumulak<br>Not the live website</div>
+  </div>
+</footer>
+
+<script>
+/* Portfolio filter */
+document.querySelectorAll('.filters button').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.filters button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true');
+    var f=b.dataset.f;
+    document.querySelectorAll('.tile').forEach(function(t){t.hidden=(f!=='all'&&t.dataset.c!==f)});
+  });
+});
+</script>
+</body>
+</html>
